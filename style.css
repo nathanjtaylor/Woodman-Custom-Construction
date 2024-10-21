@@ -1,0 +1,264 @@
+body, html{
+    /*Remove default padding and margin*/
+    padding:0;
+    margin:0;
+
+    /*Website font*/
+    font-family: "Gafata", sans-serif; /*400 only font weight*/
+}
+
+
+/*HEADERS*/
+
+header{
+    /*Main header*/
+    border-bottom: 1px solid black;
+    height: 130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    margin-bottom: 50px;
+}
+
+
+#home-header{
+    /*Home page header*/
+    background-color: #E3E3E9;
+}
+
+#title{
+    margin-right: 150px;
+    font-size: 40px;
+}
+
+#logo{
+    /*logo on home page header*/
+    width: 113.5px;
+    height: 68.5px;
+    margin-right: 50px;
+}
+
+#previous{
+    width: 53.62px;
+    position: absolute;           /* Position the back button absolutely */
+    left: 50px;     
+    top: 50%;                     /* Vertically center the button */
+    transform: translateY(-50%);
+}
+
+
+/*BODY*/
+
+h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+#margins{
+    padding: 0 392px 0;
+    background-color: #E3E3E9;
+}
+
+#content, #content_head{
+    background-color: white;
+}
+
+/*SCROLLBAR*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+/*CATAGORY BUTTONS*/
+
+#catagory_buttons{
+    /*catagory buttons using grid implementation*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 860px;
+    margin: 0 auto;
+    gap: 65px 88px;
+    margin-bottom: 10px;
+    
+}
+
+.catagory_button{
+    /*large buttons on title page*/
+    height: 293px;
+    border-radius: 66px;
+
+    text-align: center;
+    line-height: 293px;
+    font-size: 48px;
+}
+/*Setting images for catagory buttons*/
+#bathroom{background-image: url(assets/img/bathroom_sample.png);background-size: cover;}
+#deck{background-image: url(assets/img/deck_sample.png);background-size: cover;}
+#fireplace{background-image: url(assets/img/fireplace_sample.png);background-size: cover;}
+#cabinetry{background-image: url(assets/img/cabinetry_sample.png);background-size: cover;}
+
+.button_link{
+    /*button link*/
+    color: white;
+    text-decoration: none;
+}
+
+
+
+/*PROJECT GRID*/
+
+#project-tiles{
+    /*list of project tiles, displayed with grid*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 860px;
+    margin: 100px auto 85px;
+    gap: 69px 204px;
+    
+    list-style: none;
+}
+
+.project-tile{
+    /*each tile*/
+    height: 241px;
+    border-radius: 30px;
+    position: relative;
+}
+
+.project-tile{
+    font-size: 20px;
+    color: black;
+}
+
+.project-tile-image{
+    /*image on the tile*/
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.project-info{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 28px;
+    height: 64px;
+    background-color: #E3E3E9;
+
+    display: flex;
+    justify-content: space-around;      
+    align-items: center;                                                           
+}
+
+.image-bubble{
+    height: 40.67px;
+    width: 87px;
+    border-radius: 10px;
+    background-color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bubble-icon{
+    width: 32.19px;                          
+    height: 30px;
+}
+
+.bubble-number{
+    font-size: 25px;
+}
+
+
+
+/*GALLERY*/
+
+.gallery-images{
+    list-style: none;
+}
+
+.gallery-image{
+    margin: 0 auto;
+    max-width: 643px;
+    max-height: 482px;
+
+}
+
+hr{
+    margin-top: 21px;
+    margin-bottom: 21px;
+    max-width: 700px;
+}
+
+#backToTop{
+    background: none;           
+    border: none;               
+    color: black;               
+    text-decoration: underline;  
+    cursor: pointer;           
+    padding: 0;              
+    font: inherit; 
+
+    float: right;  
+    margin-right: 30px;
+}
+
+
+
+
+
+
+/* Media Queries */
+@media (max-width: 900px) {
+    #catagory_buttons{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 50px 0;   
+    }
+
+    #title{
+        margin-right: 50px;
+        font-size: 30px;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+    #project-tiles{
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 55%;
+        
+        list-style: none;
+    }
+
+    .gallery-image{
+        max-width: 95%;
+    }
+    hr{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        max-width: 95%;
+    }
+}

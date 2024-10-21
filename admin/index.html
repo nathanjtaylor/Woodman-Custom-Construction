@@ -16,9 +16,8 @@
         netlifyIdentity.init();
     
         // Open the login modal when the page loads
-        window.onload = () => {
-            netlifyIdentity.open();
-        };
+        netlifyIdentity.open();
+        
     
         netlifyIdentity.on('login', user => {
             console.log('Logged in as:', user);

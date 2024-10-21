@@ -8,16 +8,22 @@
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 </head>
 <body>
+    <h1>Woodman Custom Construction</h1>
+    <h2>Admin Panel</h2>
 
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        netlifyIdentity.init();
 
-<h1>Woodman Custom Construction</h1>
-<h2>Admin Panel</h2>
+        // Optionally open the login modal immediately
+        netlifyIdentity.on('login', user => {
+            console.log('Logged in as:', user);
+            netlifyIdentity.close(); // close the modal after logging in
+        });
 
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-    netlifyIdentity.init();
-    netlifyIdentity.open();
-</script>
-<script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+        // Show the login modal when the page loads
+        netlifyIdentity.open();
+    </script>
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </body>
 </html>

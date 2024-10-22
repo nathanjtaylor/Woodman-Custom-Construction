@@ -11,7 +11,7 @@ public_folder: "/assets/work"
 collections:
   - name: "project"
     label: "Project"
-    folder: "content/project"
+    folder: "content/project-{type}"
     create: true
     slug: "{{title}}"
     fields:

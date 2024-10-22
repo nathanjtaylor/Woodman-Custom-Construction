@@ -4,7 +4,6 @@ backend:
   branch: master 
 
 site_url: https://woodmancustomconstruction.netlify.app/
-logo_url: https://woodmancustomconstruction.netlify.app/assets/img/logo.png 
 
 media_folder: "assets/work"
 public_folder: "/assets/work"

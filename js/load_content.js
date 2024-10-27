@@ -1,5 +1,4 @@
 // DOCSTRING. Used to load category-specific content into projects.html //
-import fs from 'fs';
 
 // Grab the category from the URL and update the title
 const params = new URLSearchParams(window.location.search);
@@ -9,13 +8,5 @@ const contentFolder = `content/project-${category}`; // Get content project fold
 // Update the header title with the category
 document.getElementById('category-title').innerText = `${category} Projects`;
 
-async function fetchProjects() {
-    const projectFolder = fs.readdirSync(contentFolder)
 
-    projectFolder.forEach((mdfile) => {
-        console.log(mdfile)
-    });
-}
-
-document.addEventListener("DOMContentLoaded", fetchProjects);
 

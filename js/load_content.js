@@ -1,4 +1,5 @@
-// Used to load category-specific content into projects.html
+// DOCSTRING. Used to load category-specific content into projects.html //
+const fs = require('fs');
 
 
 // Grab the category from the URL and update the title
@@ -10,9 +11,11 @@ const contentFolder = `content/project-${category}`; // Get content project fold
 document.getElementById('category-title').innerText = `${category} Projects`;
 
 async function fetchProjects() {
-    const response = await fetch(`/${contentFolder}`);
-    const projectFiles = await response.json();
-    console.log(projectFiles);
+    const projectFolder = fs.readdirSync(contentFolder)
+
+    projectFolder.forEach((mdfile) => {
+        console.log(mdfile)
+    });
 }
 
 document.addEventListener("DOMContentLoaded", fetchProjects);

@@ -1,6 +1,5 @@
 // DOCSTRING. Used to load category-specific content into projects.html //
-const fs = require('fs');
-
+import fs from 'fs';
 
 // Grab the category from the URL and update the title
 const params = new URLSearchParams(window.location.search);

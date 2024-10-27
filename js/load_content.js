@@ -8,5 +8,13 @@ const contentFolder = `content/project-${category}`; // Get content project fold
 // Update the header title with the category
 document.getElementById('category-title').innerText = `${category} Projects`;
 
+async function fetchProjects() {
+    var projectNum = 1
+
+
+    while (true) {
+        const response = await fetch(`${contentFolder}/project${projectNum}.md`)
+    }
+}
 
 

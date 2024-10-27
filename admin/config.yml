@@ -20,11 +20,3 @@ collections:
       - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Gallery", name: "gallery", widget: "image", choose_url: false, media_library: {config: {multiple: true, max_files: 999}},
           hint: "First image will be the cover image." }
-
-  - name: "metadata"
-    label: "Metadata"
-    folder: "content/project-{type}"
-    create: true
-    slug: "metadata"
-    fields:
-      - { label: "New Number of {type} Projects", name: "project-num", widget: "number", value_type: "int" }

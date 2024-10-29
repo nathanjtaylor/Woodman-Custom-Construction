@@ -12,7 +12,6 @@ collections:
   - name: "bathroom-project"
     label: "Bathroom Project"
     folder: "content"
-    path: "project-bathroom/{{slug}}"
     create: true
     slug: "bathroom_project{{project-num}}"
     summary: '{{title}}(#{{project-num}})'
@@ -23,9 +22,7 @@ collections:
       - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text", required: false }
-      - { label: "Gallery", name: 'gallery', widget: 'image', choose_url: true, media_library: {config: {multiple: true, max_files: 999}},
-          hint: "First image will be the cover image." }
-
+      - { label: "Gallery", name: 'gallery', widget: 'image', choose_url: true, media_library: {config: {multiple: true, max_files: 999}}}
   - name: "deck-project"
     label: "Deck Project"
     folder: "content"

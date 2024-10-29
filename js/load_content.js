@@ -54,8 +54,8 @@ async function createFileArray(filePath){
           break;
         }
         // Turn responses to json and push them to fileArray
-        const json = parseResponse(response)
-        fileArray.push(json);
+        const projectData = await parseResponse(response)
+        fileArray.push(projectData);
         fileNum += 1; // increase fileNum by 1 to check next file
         } 
     } catch(error){

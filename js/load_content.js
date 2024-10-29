@@ -68,6 +68,7 @@ async function createFileArray(filePath){
 async function fetchAndDisplayProjects() {
   const projects = await createFileArray(filePath); // Get array of projects
   const projectTiles = document.getElementById("project-tiles"); // Get <ol> element
+  console.log(projects)
 
   projects.forEach(project => {
     // Project tile link

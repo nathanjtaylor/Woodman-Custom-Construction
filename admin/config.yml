@@ -13,9 +13,10 @@ collections:
     label: "Project"
     folder: "content/project-{type}"
     create: true
-    slug: "{{title}}"
+    slug: "project{{project-num}}"
     fields:
       - { label: "Type", name: "type", widget: "select", options: ['Bathroom', 'Deck', 'Fireplace', 'Cabinetry'] }
+      - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Gallery", name: "gallery", widget: "image", choose_url: false, media_library: {config: {multiple: true, max_files: 999}},

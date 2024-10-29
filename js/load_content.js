@@ -68,7 +68,6 @@ async function createFileArray(filePath){
 async function fetchAndDisplayProjects() {
   const projects = await createFileArray(filePath); // Get array of projects
   const projectTiles = document.getElementById("project-tiles"); // Get <ol> element
-  console.log(projects)
 
   projects.forEach(project => {
     // Project tile link
@@ -82,8 +81,8 @@ async function fetchAndDisplayProjects() {
     // Create the cover image element
     const projectImage = document.createElement("img");
     projectImage.classList.add("project-tile-image");
-    projectImage.src = project.gallery;//[0]; // || "assets/img/default_image.png"; // First image or default
-    projectImage.alt = project.title; // || "Project Image";
+    projectImage.src = project["gallery"];//[0]; // || "assets/img/default_image.png"; // First image or default
+    projectImage.alt = project["title"]; // || "Project Image";
 
     // Create the project info div
     const projectInfo = document.createElement("div");
@@ -92,7 +91,7 @@ async function fetchAndDisplayProjects() {
     // Create the title span and set text
     const projectTitle = document.createElement("span");
     projectTitle.classList.add("project-title");
-    projectTitle.textContent = project.title;
+    projectImage.alt = project["title"];
 
     // Create the image bubble for image count
     const imageBubble = document.createElement("div");
@@ -107,7 +106,7 @@ async function fetchAndDisplayProjects() {
     // Image count span
     const bubbleNumber = document.createElement("span");
     bubbleNumber.classList.add("bubble-number");
-    bubbleNumber.textContent = "1";//project.gallery.length;
+    bubbleNumber.textContent = "1";//project["gallery"].length;
 
     // Append elements to structure
     imageBubble.appendChild(bubbleIcon);

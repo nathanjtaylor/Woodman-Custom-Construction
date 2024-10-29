@@ -3,7 +3,8 @@
 // Grab the category from the URL and update the title
 const params = new URLSearchParams(window.location.search);
 const category = params.get('category') || ''; // Default if no category is selected
-const filePath = `content/project-${category}`; // Get content project folder
+const lowerCatagory = category.toLocaleLowerCase();
+const filePath = `content/project-${lowerCatagory}`; // Get content project folder
 
 // Update the header title with the category
 document.getElementById('category-title').innerText = `${category} Projects`;
@@ -15,7 +16,7 @@ async function createFileArray(filePath){
     try{
       while (true){
         // Fetch response and continue if response is ok
-        const response = await fetch(`${filePath}/${category}_project${fileNum}`);
+        const response = await fetch(`${filePath}/${lowerCatagory}_project${fileNum}`);
         if (!response.ok){
           break;
         }

@@ -82,7 +82,7 @@ async function fetchAndDisplayProjects() {
     // Create the cover image element
     const projectImage = document.createElement("img");
     projectImage.classList.add("project-tile-image");
-    projectImage.src = project.gallery[0]; // || "assets/img/default_image.png"; // First image or default
+    projectImage.src = project.gallery;//[0]; // || "assets/img/default_image.png"; // First image or default
     projectImage.alt = project.title; // || "Project Image";
 
     // Create the project info div

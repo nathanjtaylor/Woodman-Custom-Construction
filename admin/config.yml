@@ -9,15 +9,56 @@ media_folder: "assets/work"
 public_folder: "/assets/work"
 
 collections:
-  - name: "project"
+  - name: "bathroom-project"
     label: "Project"
     folder: "content"
-    path: "project-{{type}}/{{slug}}"
+    path: "project-bathroom/{{slug}}"
     create: true
-    slug: "{{type}}_project{{project-num}}"
+    slug: "bathroom_project{{project-num}}"
     summary: '{{title}}(#{{project-num}})'
     fields:
-      - { label: "Type", name: "type", widget: "select", options: ['Bathroom', 'Deck', 'Fireplace', 'Cabinetry'] }
+      - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Gallery", name: "gallery", widget: "image", choose_url: false, media_library: {config: {multiple: true, max_files: 999}},
+          hint: "First image will be the cover image." }
+
+  - name: "deck-project"
+    label: "Project"
+    folder: "content"
+    path: "project-deck/{{slug}}"
+    create: true
+    slug: "deck_project{{project-num}}"
+    summary: '{{title}}(#{{project-num}})'
+    fields:
+      - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Gallery", name: "gallery", widget: "image", choose_url: false, media_library: {config: {multiple: true, max_files: 999}},
+          hint: "First image will be the cover image." }
+
+  - name: "cabinetry-project"
+    label: "Project"
+    folder: "content"
+    path: "project-cabinetry/{{slug}}"
+    create: true
+    slug: "cabinetry_project{{project-num}}"
+    summary: '{{title}}(#{{project-num}})'
+    fields:
+      - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Gallery", name: "gallery", widget: "image", choose_url: false, media_library: {config: {multiple: true, max_files: 999}},
+          hint: "First image will be the cover image." }
+
+  - name: "fireplace-project"
+    label: "Project"
+    folder: "content"
+    path: "project-fireplace/{{slug}}"
+    create: true
+    slug: "fireplace_project{{project-num}}"
+    summary: '{{title}}(#{{project-num}})'
+    fields:
       - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text", required: false }

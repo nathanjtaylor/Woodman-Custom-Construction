@@ -91,7 +91,7 @@ async function fetchAndDisplayProjects() {
     // Create the title span and set text
     const projectTitle = document.createElement("span");
     projectTitle.classList.add("project-title");
-    projectImage.alt = project["title"];
+    projectTitle.textContent = project["title"];
 
     // Create the image bubble for image count
     const imageBubble = document.createElement("div");

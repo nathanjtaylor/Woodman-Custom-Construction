@@ -45,7 +45,7 @@ async function fetchAndDisplayProjects() {
     const projectTile = document.createElement("div");
     projectTile.classList.add("project-tile");
 
-    // Create the project image element
+    // Create the cover image element
     const projectImage = document.createElement("img");
     projectImage.classList.add("project-tile-image");
     projectImage.src = project.gallery[0]; // || "assets/img/default_image.png"; // First image or default

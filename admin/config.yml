@@ -15,6 +15,7 @@ collections:
     path: "project-{{type}}/{{slug}}"
     create: true
     slug: "{{type}}_project{{project-num}}"
+    summary: '{{title}}(#{{project-num}})'
     fields:
       - { label: "Type", name: "type", widget: "select", options: ['Bathroom', 'Deck', 'Fireplace', 'Cabinetry'] }
       - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }

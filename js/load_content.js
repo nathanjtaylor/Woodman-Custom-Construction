@@ -3,7 +3,7 @@
 // Grab the category from the URL and update the title
 const params = new URLSearchParams(window.location.search);
 const category = params.get('category') || ''; // Default if no category is selected
-const lowerCatagory = category.toLocaleLowerCase();
+const lowerCatagory = category.toLowerCase();
 const filePath = `content/project-${lowerCatagory}`; // Get content project folder
 
 // Update the header title with the category

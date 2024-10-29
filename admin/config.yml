@@ -5,6 +5,9 @@ backend:
 
 site_url: https://woodmancustomconstruction.netlify.app/
 
+media_folder: "assets/work"
+public_folder: "/assets/work"
+
 collections:
   - name: "bathroom-project"
     label: "Project"

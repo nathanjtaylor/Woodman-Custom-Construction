@@ -12,7 +12,7 @@ collections:
   - name: "project"
     label: "Project"
     folder: "content"
-    path: "project-{{type}}"
+    path: "project-{{type}}/{{slug}}"
     create: true
     slug: "{{type}}_project{{project-num}}"
     fields:

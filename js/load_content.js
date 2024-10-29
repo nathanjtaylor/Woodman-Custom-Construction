@@ -70,6 +70,7 @@ async function fetchAndDisplayProjects() {
   const projectTiles = document.getElementById("project-tiles"); // Get <ol> element
 
   projects.forEach(project => {
+    console.log(project)
     // Project tile link
     const projectLink = document.createElement("a");
     projectLink.href = "project.html"

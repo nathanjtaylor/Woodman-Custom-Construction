@@ -9,6 +9,39 @@ const filePath = `content/project-${lowerCatagory}`; // Get content project fold
 // Update the header title with the category
 document.getElementById('category-title').innerText = `${category} Projects`;
 
+
+
+async function parseResponse(response){
+  try {
+    // Fetch the markdown file as text
+    const textContent = await response.text();
+
+    // Use regex to find the YAML frontmatter between ---
+    const yamlMatch = textContent.match(/---\n([\s\S]+?)\n---/);
+    if (!yamlMatch) throw new Error("No YAML frontmatter found");
+
+    // Extract the YAML content
+    const yamlContent = yamlMatch[1];
+
+    // Manually parse YAML lines into a JavaScript object
+    const projectData = {};
+    yamlContent.split('\n').forEach(line => {
+        const [key, ...value] = line.split(':');
+        if (key && value) {
+            projectData[key.trim()] = value.join(':').trim();
+        }
+    });
+
+    return projectData;
+
+} catch (error) {
+    console.error("Error fetching or parsing project data:", error);
+    return null;
+}
+}
+
+
+
 // Function to create an array of json files in catagory-specific content folder
 async function createFileArray(filePath){
     var fileNum = 1; // number to access file in form project{fileNum}
@@ -21,8 +54,7 @@ async function createFileArray(filePath){
           break;
         }
         // Turn responses to json and push them to fileArray
-        console.log(response)
-        const json = await response.json();
+        const json = parseResponse(response)
         fileArray.push(json);
         fileNum += 1; // increase fileNum by 1 to check next file
         } 
@@ -31,7 +63,6 @@ async function createFileArray(filePath){
     }
     return fileArray;
   }
-
 
 
 async function fetchAndDisplayProjects() {

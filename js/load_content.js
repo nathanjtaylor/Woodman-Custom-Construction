@@ -107,7 +107,7 @@ async function fetchAndDisplayProjects() {
     // Image count span
     const bubbleNumber = document.createElement("span");
     bubbleNumber.classList.add("bubble-number");
-    bubbleNumber.textContent = project.gallery.length;
+    bubbleNumber.textContent = "1";//project.gallery.length;
 
     // Append elements to structure
     imageBubble.appendChild(bubbleIcon);

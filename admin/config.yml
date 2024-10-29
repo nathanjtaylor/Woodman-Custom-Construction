@@ -5,6 +5,7 @@ backend:
 
 site_url: https://woodmancustomconstruction.netlify.app/
 
+publish_mode: editorial_workflow
 media_folder: "assets/work"
 public_folder: "/assets/work"
 

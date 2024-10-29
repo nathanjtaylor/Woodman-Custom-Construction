@@ -21,6 +21,7 @@ async function createFileArray(filePath){
           break;
         }
         // Turn responses to json and push them to fileArray
+        console.log(response)
         const json = await response.json();
         fileArray.push(json);
         fileNum += 1; // increase fileNum by 1 to check next file

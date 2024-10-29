@@ -12,9 +12,9 @@ collections:
   - name: "project"
     label: "Project"
     folder: "content"
-    path: "/project-{{type}}"
+    path: "project-{{type}}"
     create: true
-    slug: "project{{project-num}}"
+    slug: "{{type}}_project{{project-num}}"
     fields:
       - { label: "Type", name: "type", widget: "select", options: ['Bathroom', 'Deck', 'Fireplace', 'Cabinetry'] }
       - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }

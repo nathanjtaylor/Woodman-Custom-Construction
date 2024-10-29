@@ -15,7 +15,7 @@ async function createFileArray(filePath){
     try{
       while (true){
         // Fetch response and continue if response is ok
-        const response = await fetch(`${filePath}/project${fileNum}`);
+        const response = await fetch(`${filePath}/${category}_project${fileNum}`);
         if (!response.ok){
           break;
         }

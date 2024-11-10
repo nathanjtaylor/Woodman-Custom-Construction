@@ -26,7 +26,6 @@ collections:
         name: "gallery"
         widget: "image"
         choose_url: true
-        media_library: 
-          config: 
+        media_library:
+          config:
             multiple: true
-            max_files: 999

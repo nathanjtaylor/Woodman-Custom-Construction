@@ -1,4 +1,3 @@
-
 backend:
   name: git-gateway
   branch: master 
@@ -30,7 +29,7 @@ collections:
       - label: "Gallery"
         name: "gallery"
         widget: "image"
-        multiple: true
+        allow_multiple: true
         choose_url: true
         media_library:
           config:

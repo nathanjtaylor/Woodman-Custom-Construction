@@ -7,6 +7,11 @@ site_url: https://woodmancustomconstruction.netlify.app/
 
 media_folder: "assets/work"
 public_folder: "/assets/work"
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: wcc_key
+    api_key: 831313561675293
 
 collections:
   - name: "bathroom-project"

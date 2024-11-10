@@ -45,8 +45,14 @@ collections:
       - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text", required: false }
-      - { label: "Gallery", name: 'gallery', widget: 'image', choose_url: true, media_library: config: multiple: true, max_files: 999}
-
+      - label: "Gallery"
+        name: 'gallery'
+        widget: 'image'
+        choose_url: true
+        media_library: 
+        config: 
+          multiple: true
+          max_files: 999
   - name: "cabinetry-project"
     label: "Cabinetry Project"
     folder: "content"
@@ -61,8 +67,14 @@ collections:
       - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text", required: false }
-      - { label: "Gallery", name: 'gallery', widget: 'image', choose_url: true, media_library: config: multiple: true, max_files: 999}
-
+      - label: "Gallery"
+        name: 'gallery'
+        widget: 'image'
+        choose_url: true
+        media_library: 
+        config: 
+          multiple: true
+          max_files: 999
   - name: "fireplace-project"
     label: "Fireplace Project"
     folder: "content"
@@ -77,4 +89,11 @@ collections:
       - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text", required: false }
-      - { label: "Gallery", name: 'gallery', widget: 'image', choose_url: true, media_library: config: multiple: true, max_files: 999}
+      - label: "Gallery"
+        name: 'gallery'
+        widget: 'image'
+        choose_url: true
+        media_library: 
+        config: 
+          multiple: true
+          max_files: 999

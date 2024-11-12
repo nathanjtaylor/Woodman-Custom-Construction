@@ -70,6 +70,7 @@ async function createFileArray(filePath){
         }
         // Turn responses to json and push them to fileArray
         const projectData = await parseResponse(response)
+        projectData.id = fileNum; // Set id to fileNum
         fileArray.push(projectData);
         fileNum += 1; // increase fileNum by 1 to check next file
         } 
@@ -113,7 +114,7 @@ async function fetchAndDisplayProjects() {
     console.log(project)
     // Project tile link
     const projectLink = document.createElement("a");
-    projectLink.href = "project.html"
+    projectLink.href = `project.html?id=${lowerCatagory}-${project.id}`;
 
     // Main tile container
     const projectTile = document.createElement("div");

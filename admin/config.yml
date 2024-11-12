@@ -34,3 +34,66 @@ collections:
         media_library:
           config:
             multiple: true
+  - name: "cabinetry-project"
+    label: "Cabinetry Project"
+    folder: "content/project-cabinetry"
+    create: true
+    slug: "cabinetry{{project-num}}"
+    summary: '{{title}}(#{{project-num}})'
+    description: >
+      Ensure that project numbers are sequential, with no gaps, and that if a project is removed, the remaining numbers are updated accordingly.
+    fields:
+      - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - label: "Gallery"
+        name: "gallery"
+        widget: "image"
+        hint: "First image will be cover image."
+        allow_multiple: true
+        choose_url: true
+        media_library:
+          config:
+            multiple: true
+  - name: "fireplace-project"
+    label: "Fireplace Project"
+    folder: "content/project-fireplace"
+    create: true
+    slug: "fireplace_project{{project-num}}"
+    summary: '{{title}}(#{{project-num}})'
+    description: >
+      Ensure that project numbers are sequential, with no gaps, and that if a project is removed, the remaining numbers are updated accordingly.
+    fields:
+      - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - label: "Gallery"
+        name: "gallery"
+        widget: "image"
+        hint: "First image will be cover image."
+        allow_multiple: true
+        choose_url: true
+        media_library:
+          config:
+            multiple: true
+  - name: "deck-project"
+    label: "Deck Project"
+    folder: "content/project-deck"
+    create: true
+    slug: "deck_project{{project-num}}"
+    summary: '{{title}}(#{{project-num}})'
+    description: >
+      Ensure that project numbers are sequential, with no gaps, and that if a project is removed, the remaining numbers are updated accordingly.
+    fields:
+      - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - label: "Gallery"
+        name: "gallery"
+        widget: "image"
+        hint: "First image will be cover image."
+        allow_multiple: true
+        choose_url: true
+        media_library:
+          config:
+            multiple: true

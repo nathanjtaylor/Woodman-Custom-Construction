@@ -15,13 +15,12 @@ media_library:
 collections:
   - name: "bathroom-project"
     label: "Bathroom Project"
-    folder: "content"
+    folder: "content/project-bathroom"
     create: true
     slug: "bathroom_project{{project-num}}"
     summary: '{{title}}(#{{project-num}})'
     description: >
-      Bahtroom projects. 
-      Make sure there is no gap in project numbers below.
+      Ensure that project numbers are sequential, with no gaps, and that if a project is removed, the remaining numbers are updated accordingly.
     fields:
       - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }
       - { label: "Title", name: "title", widget: "string" }

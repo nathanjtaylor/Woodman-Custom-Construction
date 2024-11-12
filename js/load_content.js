@@ -25,13 +25,28 @@ async function parseResponse(response){
 
     // Manually parse YAML lines into a JavaScript object
     const projectData = {};
-    yamlContent.split('\n').forEach(line => {
-        const [key, ...value] = line.split(':');
-        if (key && value) {
-            projectData[key.trim()] = value.join(':').trim();
-        }
-    });
+    let isInGallery = false; // Flag to track if we're in the gallery array
 
+    yamlContent.split('\n').forEach(line => {
+      // Trim whitespace and check if the line starts a gallery item
+      const trimmedLine = line.trim();
+
+      if (trimmedLine.startsWith("gallery:")) {
+        // Initialize the gallery array
+        projectData["gallery"] = [];
+        isInGallery = true; // Begin processing gallery items
+      } else if (isInGallery && trimmedLine.startsWith("-")) {
+        // If in the gallery, push image URLs into the array
+        projectData["gallery"].push(trimmedLine.slice(1).trim());
+      } else {
+        // If it's a regular key: value line
+        isInGallery = false; // End gallery context for other fields
+        const [key, ...valueParts] = line.split(':');
+        if (key && valueParts) {
+          projectData[key.trim()] = valueParts.join(':').trim();
+        }
+      }
+    });
     return projectData;
 
 } catch (error) {
@@ -82,8 +97,8 @@ async function fetchAndDisplayProjects() {
     // Create the cover image element
     const projectImage = document.createElement("img");
     projectImage.classList.add("project-tile-image");
-    projectImage.src = project["gallery"];//[0]; // || "assets/img/default_image.png"; // First image or default
-    projectImage.alt = project["title"]; // || "Project Image";
+    projectImage.src = project["gallery"][0];
+    projectImage.alt = project["title"] || "Project Image";
 
     // Create the project info div
     const projectInfo = document.createElement("div");
@@ -101,13 +116,13 @@ async function fetchAndDisplayProjects() {
     // Bubble icon image
     const bubbleIcon = document.createElement("img");
     bubbleIcon.classList.add("bubble-icon");
-    bubbleIcon.src = "assets/img/img-icon-sample.png"; // Example icon, can be updated as needed
+    bubbleIcon.src = "assets/img/img-icon-sample.png";
     bubbleIcon.alt = "Image Icon";
 
     // Image count span
     const bubbleNumber = document.createElement("span");
     bubbleNumber.classList.add("bubble-number");
-    bubbleNumber.textContent = "1";//project["gallery"].length;
+    bubbleNumber.textContent = project["gallery"].length || 1;
 
     // Append elements to structure
     imageBubble.appendChild(bubbleIcon);
@@ -118,7 +133,6 @@ async function fetchAndDisplayProjects() {
     projectTile.appendChild(projectInfo);
     projectLink.appendChild(projectTile);
     projectTiles.appendChild(projectLink); // Append completed tile to the <ol> list
-
   });
 
   

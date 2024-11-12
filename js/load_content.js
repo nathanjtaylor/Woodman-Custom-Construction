@@ -49,10 +49,10 @@ async function parseResponse(response){
     });
     return projectData;
 
-} catch (error) {
+  } catch (error) {
     console.error("Error fetching or parsing project data:", error);
     return null;
-}
+  }
 }
 
 
@@ -80,9 +80,34 @@ async function createFileArray(filePath){
   }
 
 
+function displayGallery(galleryImages) {
+  const galleryImagesOL = document.getElementById("gallery-images"); // Get gallery <ol> element
+  
+  galleryImages.forEach(imageSrc => {
+    // Create list item and image elements
+    const listItem = document.createElement("li");
+    listItem.classList.add("gallery-image");
+
+    const galleryImage = document.createElement("img");
+    galleryImage.classList.add("gallery-image");
+    galleryImage.src = imageSrc;
+    galleryImage.alt = "Gallery Image"; // You can customize alt text as needed
+
+    // Append the image to the list item, then the list item to the gallery
+    listItem.appendChild(galleryImage);
+    galleryImagesOL.appendChild(listItem);
+
+    // Add a horizontal line after each image (except the last one)
+    const hr = document.createElement("hr");
+    galleryImagesOL.appendChild(hr);
+  });
+}
+
+
 async function fetchAndDisplayProjects() {
   const projects = await createFileArray(filePath); // Get array of projects
   const projectTiles = document.getElementById("project-tiles"); // Get <ol> element
+  var galleryImages = []; // Array of all images to be appended to gallery
 
   projects.forEach(project => {
     console.log(project)
@@ -107,7 +132,7 @@ async function fetchAndDisplayProjects() {
     // Create the title span and set text
     const projectTitle = document.createElement("span");
     projectTitle.classList.add("project-title");
-    projectTitle.textContent = project["title"];
+    projectTitle.textContent = project["title"] || "Untitled Project";;
 
     // Create the image bubble for image count
     const imageBubble = document.createElement("div");
@@ -133,9 +158,10 @@ async function fetchAndDisplayProjects() {
     projectTile.appendChild(projectInfo);
     projectLink.appendChild(projectTile);
     projectTiles.appendChild(projectLink); // Append completed tile to the <ol> list
-  });
 
-  
+    galleryImages = galleryImages.concat(project["gallery"]);
+  });
+  displayGallery(galleryImages);
 }
 
 document.addEventListener("DOMContentLoaded", fetchAndDisplayProjects);

@@ -11,7 +11,7 @@ document.getElementById('category-title').innerText = `${category} Projects`;
 
 
 
-async function parseResponse(response){
+export async function parseResponse(response){
   try {
     // Fetch the markdown file as text
     const textContent = await response.text();
@@ -81,7 +81,7 @@ async function createFileArray(filePath){
   }
 
 
-function displayGallery(galleryImages) {
+export function displayGallery(galleryImages) {
   const galleryImagesOL = document.getElementById("gallery-images"); // Get gallery <ol> element
   
   galleryImages.forEach(imageSrc => {
@@ -111,7 +111,6 @@ async function fetchAndDisplayProjects() {
   var galleryImages = []; // Array of all images to be appended to gallery
 
   projects.forEach(project => {
-    console.log(project)
     // Project tile link
     const projectLink = document.createElement("a");
     projectLink.href = `project.html?id=${lowerCatagory}-${project.id}`;

@@ -38,7 +38,7 @@ collections:
     label: "Cabinetry Project"
     folder: "content/project-cabinetry"
     create: true
-    slug: "cabinetry{{project-num}}"
+    slug: "cabinetry_project{{project-num}}"
     summary: '{{title}}(#{{project-num}})'
     description: >
       Ensure that project numbers are sequential, with no gaps, and that if a project is removed, the remaining numbers are updated accordingly.

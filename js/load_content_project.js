@@ -2,7 +2,7 @@
 const params = new URLSearchParams(window.location.search);
 const projectId = params.get('id');
 const [category, ...number] = projectId.split('-');
-const filePath = `content/project-${category}/${category}_project${number}`;
+const filePath = `content/project-${category}/${category}_project${number}.md`;
 
 function displayGallery(galleryImages) {
     const galleryImagesOL = document.getElementById("gallery-images"); // Get gallery <ol> element

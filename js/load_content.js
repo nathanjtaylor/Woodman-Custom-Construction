@@ -11,7 +11,7 @@ document.getElementById('category-title').innerText = `${category} Projects`;
 
 
 
-export async function parseResponse(response){
+async function parseResponse(response){
   try {
     // Fetch the markdown file as text
     const textContent = await response.text();
@@ -81,7 +81,7 @@ async function createFileArray(filePath){
   }
 
 
-export function displayGallery(galleryImages) {
+function displayGallery(galleryImages) {
   const galleryImagesOL = document.getElementById("gallery-images"); // Get gallery <ol> element
   
   galleryImages.forEach(imageSrc => {

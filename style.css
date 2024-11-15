@@ -55,7 +55,7 @@ header{
 }
 
 #project_header{
-    text-align: right;
+    text-align: center;
     padding: 0 2% 0 20%;
 }
 
@@ -300,5 +300,9 @@ hr{
         margin-top: 15px;
         margin-bottom: 15px;
         max-width: 95%;
+    }
+
+    #project_header{
+        text-align: right;
     }
 }

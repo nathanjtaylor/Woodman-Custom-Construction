@@ -45,7 +45,7 @@ async function parseResponse(response){
         // If in the gallery, push image URLs into the array
         const trimmedLine = line.trim();
         projectData["gallery"].push(trimmedLine.slice(1).trim());
-      } else if (isInDescription && line.startsWith("  ")) {
+      } else if (isInDescription && (line.startsWith("  ") || line === "")) {
         // If in the multiline description, concat description line onto string
         const trimmedLine = line.trim();
         projectData["description"] = projectData["description"].concat(" ", trimmedLine);

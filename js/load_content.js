@@ -87,7 +87,7 @@ function displayGallery(galleryImages) {
   galleryImages.forEach(imageSrc => {
     // Create list item and image elements
     const listItem = document.createElement("li");
-    listItem.classList.add("gallery-image");
+    listItem.classList.add("gallery-image-li");
 
     const galleryImage = document.createElement("img");
     galleryImage.classList.add("gallery-image");

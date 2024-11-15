@@ -49,6 +49,15 @@ header{
     transform: translateY(-50%);
 }
 
+#content_head{
+    background-color: white;
+    margin-bottom: 0;
+}
+
+#project_header{
+    text-align: right;
+    padding: 0 2% 0 20%;
+}
 
 /*BODY*/
 
@@ -58,13 +67,15 @@ h2{
 }
 
 #margins{
-    padding: 0 392px 0;
+    padding: 0 20% 0;
     background-color: #E3E3E9;
 }
 
-#content, #content_head{
+#content{
     background-color: white;
 }
+
+
 
 /*SCROLLBAR*/
 /* width */
@@ -166,9 +177,15 @@ h2{
     height: 64px;
     background-color: #E3E3E9;
 
+    overflow: hidden;
     display: flex;
     justify-content: space-around;      
     align-items: center;                                                           
+}
+
+.project-title{
+    max-width: 70%;
+    text-align: center;
 }
 
 .image-bubble{
@@ -193,16 +210,30 @@ h2{
 
 
 
+
+
 /*GALLERY*/
 
-.gallery-images{
+#gallery-images{
     list-style: none;
+    padding: 0; 
+    margin: 0 auto;  
+    text-align: center;
+}
+
+.gallery-image-li{
+    display: flex; 
+    justify-content: center;       
+    list-style-type: none;        
+    margin: 0;                    
 }
 
 .gallery-image{
-    margin: 0 auto;
     max-width: 643px;
     max-height: 482px;
+    margin: auto;     
+    padding: 0;
+    display: block;            
 
 }
 
@@ -213,10 +244,12 @@ hr{
 }
 
 #project_description{
-    margin: 50px;
+    margin-top: 0;
+    padding: 5%;
 }
 
-#backToTop{
+#backToTop{ /* REVISIT Currently not functional */
+    display: none;
     background: none;           
     border: none;               
     color: black;               
@@ -226,12 +259,9 @@ hr{
     font: inherit; 
 
     float: right;  
-    margin-right: 30px;
+    margin-right: 20%;
+    margin-bottom: 30px;
 }
-
-
-
-
 
 
 /* Media Queries */
@@ -244,6 +274,12 @@ hr{
     #title{
         margin-right: 50px;
         font-size: 30px;
+    }
+
+    #margins{
+        margin: 0;
+        padding: 0;
+        background-color: white;
     }
 
 }

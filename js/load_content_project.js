@@ -78,11 +78,11 @@ async function loadProject(filePath) {
         const projectData = await parseResponse(response); // Await parseResponse to get actual project data
     
         // Project HTML elements
-        const projectTitle = document.getElementById("project-title");
+        const projectHeader = document.getElementById("project_header");
         const projectDescription = document.getElementById("project_description");
     
         // Fill content
-        projectTitle.innerText = projectData["title"];
+        projectHeader.innerText = projectData["title"];
         projectDescription.innerText = projectData["description"];
         displayGallery(projectData["gallery"]); // Call displayGallery with the gallery data
       } catch (error) {

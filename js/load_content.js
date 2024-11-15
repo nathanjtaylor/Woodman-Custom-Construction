@@ -26,21 +26,33 @@ async function parseResponse(response){
     // Manually parse YAML lines into a JavaScript object
     const projectData = {};
     let isInGallery = false; // Flag to track if we're in the gallery array
+    let isInDescription = false; // Flag to track if we're in the multiline description array
 
     yamlContent.split('\n').forEach(line => {
       // Trim whitespace and check if the line starts a gallery item
-      const trimmedLine = line.trim();
 
-      if (trimmedLine.startsWith("gallery:")) {
+      if (line.startsWith("description: >-")) {
+        // Initalize the description key if description is multiline
+        isInGallery = false;
+        projectData["description"] = "";
+        isInDescription = true;
+      } else if (line.startsWith("gallery:")) {
         // Initialize the gallery array
+        isInDescription = false;
         projectData["gallery"] = [];
         isInGallery = true; // Begin processing gallery items
-      } else if (isInGallery && trimmedLine.startsWith("-")) {
+      } else if (isInGallery && line.startsWith("  -")) {
         // If in the gallery, push image URLs into the array
+        const trimmedLine = line.trim();
         projectData["gallery"].push(trimmedLine.slice(1).trim());
+      } else if (isInDescription && line.startsWith("  ")) {
+        // If in the multiline description, concat description line onto string
+        const trimmedLine = line.trim();
+        projectData["description"] = projectData["description"].concat(" ", trimmedLine);
       } else {
         // If it's a regular key: value line
         isInGallery = false; // End gallery context for other fields
+        isInDescription = false;
         const [key, ...valueParts] = line.split(':');
         if (key && valueParts) {
           projectData[key.trim()] = valueParts.join(':').trim();

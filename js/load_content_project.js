@@ -53,10 +53,16 @@ async function parseResponse(response){
         projectData["description"] = "";
         isInDescription = true;
       } else if (line.startsWith("gallery:")) {
-        // Initialize the gallery array
         isInDescription = false;
-        projectData["gallery"] = [];
-        isInGallery = true; // Begin processing gallery items
+        const galleryLine = line.split(':');
+        if (galleryLine[1].trim() === ""){
+          // Multiline gallery; Initialize the gallery array
+          projectData["gallery"] = [];
+          isInGallery = true; // Begin processing gallery items
+        } else{
+          // Single line gallery
+          projectData[galleryLine[0].trim()] = galleryLine[1].trim();
+        }
       } else if (isInGallery && line.startsWith("  -")) {
         // If in the gallery, push image URLs into the array
         const trimmedLine = line.trim();

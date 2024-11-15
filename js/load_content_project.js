@@ -61,7 +61,7 @@ async function parseResponse(response){
           isInGallery = true; // Begin processing gallery items
         } else{
           // Single line gallery
-          projectData[galleryLine[0].trim()] = galleryLine.slice(1).join(':').trim();
+          projectData[galleryLine[0].trim()] = [galleryLine.slice(1).join(':').trim()];
         }
       } else if (isInGallery && line.startsWith("  -")) {
         // If in the gallery, push image URLs into the array

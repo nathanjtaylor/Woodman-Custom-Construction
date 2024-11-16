@@ -41,12 +41,19 @@ header{
     margin-right: 50px;
 }
 
-#previous{
+.previous-hover, .previous-normal{
     width: 53.62px;
     position: absolute;           /* Position the back button absolutely */
     left: 50px;     
     top: 50%;                     /* Vertically center the button */
     transform: translateY(-50%);
+    background-image: url(assets/img/back_sample.png);
+    background-size: cover;
+
+    transition: opacity 0.2s ease;
+}
+.previous-normal:hover{
+    opacity: 0;
 }
 
 #content_head{
@@ -112,6 +119,14 @@ h2{
     
 }
 
+
+
+/*Setting images for catagory buttons*/
+#bathroom{background-image: url(assets/img/bathroom_sample.png);background-size: cover;}
+#deck{background-image: url(assets/img/deck_sample.png);background-size: cover;}
+#fireplace{background-image: url(assets/img/fireplace_sample.png);background-size: cover;background-position: bottom;}
+#cabinetry{background-image: url(assets/img/cabinetry_sample.png);background-size: cover;}
+
 .catagory_button{
     /*large buttons on title page*/
     height: 293px;
@@ -120,17 +135,16 @@ h2{
     text-align: center;
     line-height: 293px;
     font-size: 48px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
 }
-/*Setting images for catagory buttons*/
-#bathroom{background-image: url(assets/img/bathroom_sample.png);background-size: cover;}
-#deck{background-image: url(assets/img/deck_sample.png);background-size: cover;}
-#fireplace{background-image: url(assets/img/fireplace_sample.png);background-size: cover;}
-#cabinetry{background-image: url(assets/img/cabinetry_sample.png);background-size: cover;}
 
 .button_link{
     /*button link*/
     color: white;
     text-decoration: none;
+}
+.button_link:hover .catagory_button {
+    transform: scale(1.1); /* Scale the button by 10% on hover */
 }
 
 
@@ -155,6 +169,11 @@ h2{
     height: 241px;
     border-radius: 30px;
     position: relative;
+
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+.project-tile:hover{
+    transform: translateY(-10px);
 }
 
 .project-tile{
@@ -312,7 +331,7 @@ hr{
 
 @media (max-width: 800px) { /*Mobile Phone*/
     #catagory_buttons{
-        gap: 30px
+        gap: 20px
     }
     
     .catagory_button{
@@ -322,6 +341,7 @@ hr{
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 10px;
     }
 
     #project-tiles{
@@ -331,6 +351,6 @@ hr{
     }
 
     #category-title{
-        font-size: 30px;
+        font-size: 20px;
     }
 }

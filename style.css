@@ -148,7 +148,6 @@ h2{
 }
 
 
-
 /*PROJECT GRID*/
 
 #project-tiles{
@@ -329,7 +328,7 @@ hr{
     }
 }
 
-@media (max-width: 800px) { /*Mobile Phone*/
+@media (max-width: 400px) { /*Mobile Phone*/
     #catagory_buttons{
         gap: 20px
     }
@@ -354,5 +353,9 @@ hr{
     #category-title{
         padding: 0 2% 0 20%;
         text-align: right;
+    }
+
+    #logo{
+        margin-left: 20px;
     }
 }

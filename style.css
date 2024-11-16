@@ -348,9 +348,11 @@ hr{
         margin: 50px auto 45px;
         max-width: 85%;
         gap: 30px;
+
     }
 
     #category-title{
-        font-size: 20px;
+        padding: 0 2% 0 20%;
+        text-align: right;
     }
 }

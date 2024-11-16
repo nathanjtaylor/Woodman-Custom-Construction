@@ -119,8 +119,6 @@ h2{
     
 }
 
-
-
 /*Setting images for catagory buttons*/
 #bathroom{background-image: url(assets/img/bathroom_sample.png);background-size: cover;}
 #deck{background-image: url(assets/img/deck_sample.png);background-size: cover;}
@@ -165,7 +163,8 @@ h2{
 
 .project-tile{
     /*each tile*/
-    height: 241px;
+    aspect-ratio: 4 / 3; /* Maintains consistent ratio without fixed width */
+
     border-radius: 30px;
     position: relative;
 
@@ -357,7 +356,7 @@ hr{
     }
 
     #logo{
-        margin-left: 30px;
+        margin-left: 40px;
     }
 
     #project_header{

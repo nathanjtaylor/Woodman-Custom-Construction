@@ -20,7 +20,7 @@ collections:
     slug: "bathroom_project{{project-num}}"
     summary: '{{title}}(#{{project-num}})'
     description: >
-      Ensure that project numbers are sequential, with no gaps, and that if a project is removed, the remaining numbers are updated accordingly.
+      Please ensure that project numbers are sequential, with no gaps. Currently, there is no way to safely remove a project. If you need to update a project, either replace an existing project's content with a new one or contact Nathan for assistance.
     fields:
       - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }
       - { label: "Title", name: "title", widget: "string" }
@@ -41,7 +41,7 @@ collections:
     slug: "cabinetry_project{{project-num}}"
     summary: '{{title}}(#{{project-num}})'
     description: >
-      Ensure that project numbers are sequential, with no gaps, and that if a project is removed, the remaining numbers are updated accordingly.
+      Please ensure that project numbers are sequential, with no gaps. Currently, there is no way to safely remove a project. If you need to update a project, either replace an existing project's content with a new one or contact Nathan for assistance.
     fields:
       - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }
       - { label: "Title", name: "title", widget: "string" }
@@ -62,7 +62,7 @@ collections:
     slug: "fireplace_project{{project-num}}"
     summary: '{{title}}(#{{project-num}})'
     description: >
-      Ensure that project numbers are sequential, with no gaps, and that if a project is removed, the remaining numbers are updated accordingly.
+      Please ensure that project numbers are sequential, with no gaps. Currently, there is no way to safely remove a project. If you need to update a project, either replace an existing project's content with a new one or contact Nathan for assistance.
     fields:
       - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }
       - { label: "Title", name: "title", widget: "string" }
@@ -83,7 +83,7 @@ collections:
     slug: "deck_project{{project-num}}"
     summary: '{{title}}(#{{project-num}})'
     description: >
-      Ensure that project numbers are sequential, with no gaps, and that if a project is removed, the remaining numbers are updated accordingly.
+      Please ensure that project numbers are sequential, with no gaps. Currently, there is no way to safely remove a project. If you need to update a project, either replace an existing project's content with a new one or contact Nathan for assistance.
     fields:
       - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }
       - { label: "Title", name: "title", widget: "string" }

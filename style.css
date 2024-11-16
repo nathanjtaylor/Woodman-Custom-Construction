@@ -298,7 +298,6 @@ hr{
         
         list-style: none;
     }
-
     .gallery-image{
         max-width: 95%;
     }
@@ -306,5 +305,21 @@ hr{
         margin-top: 15px;
         margin-bottom: 15px;
         max-width: 95%;
+    }
+}
+
+@media (max-width: 400px) { /*Mobile Phone*/
+    #catagory_buttons{
+        gap: 30px
+    }
+    
+    .catagory_button{
+        height: 200px;
+    }
+
+    #project-tiles{
+        margin: 50px auto 45px;
+        max-width: 85%;
+        gap: 30px;
     }
 }

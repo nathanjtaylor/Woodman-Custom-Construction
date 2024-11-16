@@ -143,9 +143,11 @@ h2{
     grid-template-columns: repeat(2, 1fr);
     max-width: 860px;
     margin: 100px auto 85px;
+    padding: 0;
     gap: 69px 204px;
     
     list-style: none;
+    justify-items: center;
 }
 
 .project-tile{
@@ -308,18 +310,27 @@ hr{
     }
 }
 
-@media (max-width: 400px) { /*Mobile Phone*/
+@media (max-width: 800px) { /*Mobile Phone*/
     #catagory_buttons{
         gap: 30px
     }
     
     .catagory_button{
+        border-radius: 33px;
         height: 200px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #project-tiles{
         margin: 50px auto 45px;
         max-width: 85%;
         gap: 30px;
+    }
+
+    #category-title{
+        font-size: 30px;
     }
 }

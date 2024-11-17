@@ -1,7 +1,8 @@
 ---
 project-num: 7
 title: Pinehurst Circle 2021
-description: Trex Deck with Rain Escapes and Stainless Steel Railing
+description: Trex Winchester Gray Deck with Rain Escapes, finished Cedar Ceiling
+  with lights, and Stainless Steel Railing
 gallery:
   - https://res.cloudinary.com/dje4uyqoo/image/upload/v1731860860/6067163692225447645_jdrbw3.jpg
   - https://res.cloudinary.com/dje4uyqoo/image/upload/v1731860859/7182280455651425329_nplj2n.jpg

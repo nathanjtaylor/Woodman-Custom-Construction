@@ -1,7 +1,8 @@
 ---
 project-num: 2
 title: Stonebrook Dr 2024
-description: Deck Replacement - Trex & Rain Escapes Waterproofing System
+description: Trex Lineage Biscayne Deck Replacement with painted joists & Rain
+  Escapes Waterproofing System
 gallery:
   - https://res.cloudinary.com/dje4uyqoo/image/upload/v1731773743/20240612_144744_vc9rvh.jpg
   - https://res.cloudinary.com/dje4uyqoo/image/upload/v1731773742/20240530_093145_fvxlhp.jpg

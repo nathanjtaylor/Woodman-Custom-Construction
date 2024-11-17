@@ -5,6 +5,7 @@ description: Primary Bathroom Complete Renovation
 gallery:
   - https://res.cloudinary.com/dje4uyqoo/image/upload/v1731800833/20230622_170251_ypx61v.jpg
   - https://res.cloudinary.com/dje4uyqoo/image/upload/v1731800829/20230622_170240_fx3nvr.jpg
+  - https://res.cloudinary.com/dje4uyqoo/image/upload/v1731851775/20230630_123241_k8bzyt.jpg
   - https://res.cloudinary.com/dje4uyqoo/image/upload/v1731800828/20230622_170221_obgz21.jpg
   - https://res.cloudinary.com/dje4uyqoo/image/upload/v1731800823/20230512_112906_tixcaq.jpg
 ---

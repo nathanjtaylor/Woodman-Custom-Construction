@@ -1,9 +1,8 @@
 ---
-project-num: 5
-title: Oak Forest Ct 2023
-description: Laundry Room Cabinets & Custom-Stained Butcher's Block Countertop
+project-num: 6
+title: Oak Forest Dr 2023
+description: Mudroom Renovation with Upper & Lower Cubbies, and Custom-Stained Bench
 gallery:
-  - https://res.cloudinary.com/dje4uyqoo/image/upload/v1731775558/20231122_095207_w05xa5.jpg
-  - https://res.cloudinary.com/dje4uyqoo/image/upload/v1731775553/20231120_152625_iktunv.jpg
-  - https://res.cloudinary.com/dje4uyqoo/image/upload/v1731775551/20231120_152604_uriocs.jpg
+  - https://res.cloudinary.com/dje4uyqoo/image/upload/v1731775983/20231023_140937_qzvnfi.jpg
+  - https://res.cloudinary.com/dje4uyqoo/image/upload/v1731775987/20231023_141018_clcqht.jpg
 ---

@@ -1,5 +1,5 @@
 ---
-project-num: 7
+project-num: 6
 title: Oak Forest Dr 2023
 description: Mudroom Renovation with Upper & Lower Cubbies, and Custom-Stained Bench
 gallery:

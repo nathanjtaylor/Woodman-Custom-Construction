@@ -102,7 +102,7 @@ async function loadProject(filePath) {
   
       // Fill content
       projectHeader.innerText = projectData["title"];
-      if (projectDescription !== undefined){
+      if (projectData["description"] !== undefined){
         projectDescription.innerText = projectData["description"];
       }
       displayGallery(projectData["gallery"]); // Call displayGallery with the gallery data

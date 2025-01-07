@@ -102,7 +102,9 @@ async function loadProject(filePath) {
   
       // Fill content
       projectHeader.innerText = projectData["title"];
-      projectDescription.innerText = projectData["description"];
+      if (projectDescription !== undefined){
+        projectDescription.innerText = projectData["description"];
+      }
       displayGallery(projectData["gallery"]); // Call displayGallery with the gallery data
     } catch (error) {
       console.error("Error loading project:", error); // Handle potential errors (e.g., missing files)

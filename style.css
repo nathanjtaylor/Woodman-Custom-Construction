@@ -368,7 +368,25 @@ hr{
     }
 }
 
-@media (max-width: 400px) { /*Mobile Phone*/
+
+@media (max-width: 600px) {
+    #logo{
+        width: 90.8px;
+        height: 54.8px;
+        margin-right: 10px;
+        margin-left: 5px;
+    }
+    #title{
+        margin-right: 0px;
+        font-size: 20px;
+    }
+    #contact{
+        margin-left: 0px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 430px) { /*Mobile Phone*/
     #catagory_buttons{
         gap: 20px
     }
@@ -396,10 +414,6 @@ hr{
         margin-left: 10px;
     }
 
-    #logo{
-        margin-left: 40px;
-    }
-
     #project_header{
         margin-left: 20px;
     }
@@ -409,7 +423,17 @@ hr{
     }
 
     #title{
-        text-align: right;
+        text-align: left;
+        font-size: 18px;
+    }
+
+    #contact{
+        font-size: 10px;
+    }
+    #logo{
+        width: 72.64px;
+        height: 43.84px;
+        margin-right: 2px;
     }
 
 

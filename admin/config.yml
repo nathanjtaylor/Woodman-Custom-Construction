@@ -101,3 +101,26 @@ collections:
         media_library:
           config:
             multiple: true
+  - name: "other-project"
+    label: "Other Project"
+    folder: "content/project-other"
+    create: true
+    slug: "other_project{{project-num}}"
+    summary: '{{title}}(#{{project-num}})'
+    description: >
+      Please ensure that project numbers are sequential, with no gaps. 
+      Currently, there is no way to safely remove a project. If you need to remove a project, either replace an existing project's content with a new one or contact Nathan for assistance.
+    fields:
+      - { label: "Project Number", name: "project-num", widget: "number", value_type: "int", min: 1 }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - label: "Gallery"
+        name: "gallery"
+        widget: "image"
+        hint: "First image will be cover image."
+        allow_multiple: true
+        choose_url: true
+        media_library:
+          config:
+            multiple: true
+

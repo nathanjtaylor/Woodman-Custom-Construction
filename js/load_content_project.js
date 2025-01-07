@@ -25,6 +25,7 @@ function displayGallery(galleryImages) {
       const hr = document.createElement("hr");
       galleryImagesOL.appendChild(hr);
     });
+    galleryImagesOL.removeChild(galleryImagesOL.lastElementChild);
   }
 
 async function parseResponse(response){

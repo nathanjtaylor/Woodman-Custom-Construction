@@ -1,6 +1,6 @@
 ---
 project-num: 5
-title: North Fox Dr
+title: North Fox Dr 2023
 description: Tile fireplace renovation with built-in bookcases/cabinets on each side.
 gallery:
   - https://res.cloudinary.com/dje4uyqoo/image/upload/v1731801140/20230215_151800_xja6zn.jpg

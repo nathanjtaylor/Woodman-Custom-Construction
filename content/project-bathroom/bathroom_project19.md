@@ -1,6 +1,6 @@
 ---
 project-num: 19
-title: "Brooklane Blvd #2"
+title: "Brooklane Blvd 2025 #2"
 description: Jack & Jill Bathroom w/dual vanities, glass tile accent stripe,
   multiple showerheads
 gallery:
